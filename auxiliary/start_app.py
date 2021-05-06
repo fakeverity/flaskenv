@@ -1,11 +1,9 @@
 from   dotenv     import load_dotenv
 from   app.server import server
-from   db.spinup  import db_init
 import os
 
-def start_app(take_shit):
+def start_app():
     load_dotenv()
-    db_init()
     server()
 
     

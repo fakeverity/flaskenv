@@ -4,18 +4,18 @@ from sqlalchemy import(
     , String
     , DateTime
     , MetaData
-    , create_engine as mkengine
+    , func
 )
-from sqlalchemy.orm import declarativ_base 
+from sqlalchemy.orm import declarative_base 
 from os import environ
+from db.spinup import ALCDB
 
 # Initialize alchemy utils
 # ------------------------
-Base   = declarative_base()
-engine = mkengine(environ.get("ALCHEMY_URL"))
+dbInstance = ALCDB()
+Base = dbInstance.Base
+Base.metadata.create_all(Engine)
 
-
-# Define record & table models
 # ----------------------------
 class User(Base):
     __tablename__ = 'users'
