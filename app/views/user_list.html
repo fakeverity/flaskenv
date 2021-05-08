@@ -1,0 +1,33 @@
+<style type="text/css">
+    table {
+        border: 1px solid black;
+        text-align: center;
+        min-with: 250px;
+        width: 90%;
+        margin: auto;
+    } 
+
+    table td {
+        border: 1px solid black;
+        text-align: center;
+        padding: 4px;
+    }
+    table th { border: 1px solid black;  padding: 10px; } 
+</style>
+<table>
+<tr>
+    <th>Name</th>
+    <th>Fullname</th>
+    <th>Username</th>
+    <th>Creation date</th>
+</th>
+
+{% for rec in data %}
+ <tr>
+    <td>{{ rec.name      }}</td>
+    <td>{{ rec.full_name }}</td>
+    <td>{{ rec.username  }}</td>
+    <td>{{ rec.created   }}</td>
+  </tr>
+{% endfor %}
+</table>
