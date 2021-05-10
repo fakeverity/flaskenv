@@ -1,8 +1,11 @@
 *.pyc
 .idea
+__pycache__
+/*/__pycache__
 /bin
 /lib
 /lib64
 /include
 /pyvenv.cfg
 /.env
+/app/controllers/sessions/
