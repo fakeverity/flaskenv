@@ -6,5 +6,5 @@
 ## Huw to start
 ```Bash
     . bin/activate
-    (shitenv) python3 manager.py
+    (env) python3 manager.py
 ```
